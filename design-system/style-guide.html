@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Split-the-Bill — Style guide</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="prototype-utils.css">
+<style>
+  .sg { padding-block: var(--space-4); }
+  .sg section { padding-block: var(--space-4); border-top: var(--border-width) solid var(--color-border); }
+  .sw { height: var(--control-height-lg); border: var(--border-width) solid var(--color-border); border-radius: var(--radius-sm); }
+  .bar { display: inline-block; height: var(--space-2); background: var(--color-primary); }
+  .rad { width: var(--avatar-size); height: var(--avatar-size); background: var(--color-surface-strong); border: var(--border-width) solid var(--color-border); }
+  .lbl { min-width: var(--menu-min-width); }
+  .demo { position: relative; min-height: var(--control-height-lg); }
+  .guide h3 { margin-top: var(--space-3); }
+  .guide ul { margin: 0; padding-left: var(--space-4); }
+</style>
+</head>
+<body>
+<div class="container sg stack-lg stack">
+<h1>Split-the-Bill style guide</h1>
+<p class="muted">Light theme. All values come from <code>tokens.json</code> via <code>tokens.css</code>.</p>
+
+<section class="stack" id="tokens">
+<h2>Colour tokens</h2>
+<div class="grid">
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-fg)"></div><code>color-fg</code><span class="muted text-sm">Primary text</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-fg-muted)"></div><code>color-fg-muted</code><span class="muted text-sm">Secondary text, hints</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-bg)"></div><code>color-bg</code><span class="muted text-sm">Page background</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-surface)"></div><code>color-surface</code><span class="muted text-sm">Secondary surface</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-surface-strong)"></div><code>color-surface-strong</code><span class="muted text-sm">Skeletons, pressed</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-primary)"></div><code>color-primary</code><span class="muted text-sm">Brand, primary actions</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-primary-hover)"></div><code>color-primary-hover</code><span class="muted text-sm">Primary hover</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-on-primary)"></div><code>color-on-primary</code><span class="muted text-sm">Text on filled buttons</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-border)"></div><code>color-border</code><span class="muted text-sm">Borders</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-focus)"></div><code>color-focus</code><span class="muted text-sm">Focus ring</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-overlay)"></div><code>color-overlay</code><span class="muted text-sm">Backdrop</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-danger)"></div><code>color-danger</code><span class="muted text-sm">Destructive, you owe</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-danger-bg)"></div><code>color-danger-bg</code><span class="muted text-sm">Danger tint</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-success)"></div><code>color-success</code><span class="muted text-sm">Success, you are owed</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-success-bg)"></div><code>color-success-bg</code><span class="muted text-sm">Success tint</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-warning)"></div><code>color-warning</code><span class="muted text-sm">Warning</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-warning-bg)"></div><code>color-warning-bg</code><span class="muted text-sm">Warning tint</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-info)"></div><code>color-info</code><span class="muted text-sm">Info</span></div>
+  <div class="stack stack-sm"><div class="sw" style="background:var(--color-info-bg)"></div><code>color-info-bg</code><span class="muted text-sm">Info tint</span></div>
+</div>
+
+<h2>Spacing</h2>
+<div class="stack stack-sm">
+  <div class="cluster"><code class="lbl">space-1</code><span class="bar" style="width:var(--space-1)"></span></div>
+  <div class="cluster"><code class="lbl">space-2</code><span class="bar" style="width:var(--space-2)"></span></div>
+  <div class="cluster"><code class="lbl">space-3</code><span class="bar" style="width:var(--space-3)"></span></div>
+  <div class="cluster"><code class="lbl">space-4</code><span class="bar" style="width:var(--space-4)"></span></div>
+  <div class="cluster"><code class="lbl">space-5</code><span class="bar" style="width:var(--space-5)"></span></div>
+</div>
+
+<h2>Radii</h2>
+<div class="cluster cluster-lg">
+  <div class="stack stack-sm"><div class="rad" style="border-radius:var(--radius-sm)"></div><code>radius-sm</code></div>
+  <div class="stack stack-sm"><div class="rad" style="border-radius:var(--radius-md)"></div><code>radius-md</code></div>
+  <div class="stack stack-sm"><div class="rad" style="border-radius:var(--radius-lg)"></div><code>radius-lg</code></div>
+  <div class="stack stack-sm"><div class="rad" style="border-radius:var(--radius-full)"></div><code>radius-full</code></div>
+</div>
+
+<h2>Type</h2>
+<div class="stack stack-sm">
+  <div class="cluster"><code class="lbl">font-size-sm</code><span style="font-size:var(--font-size-sm)">Ravi pays Asha ₹400</span></div>
+  <div class="cluster"><code class="lbl">font-size-md</code><span style="font-size:var(--font-size-md)">Ravi pays Asha ₹400</span></div>
+  <div class="cluster"><code class="lbl">font-size-lg</code><span style="font-size:var(--font-size-lg)">Ravi pays Asha ₹400</span></div>
+  <div class="cluster"><code class="lbl">font-size-xl</code><span style="font-size:var(--font-size-xl)">Ravi pays Asha ₹400</span></div>
+  <div style="font-weight:var(--font-weight-regular)"><code>font-weight-regular</code> Dinner split three ways</div>
+  <div style="font-weight:var(--font-weight-medium)"><code>font-weight-medium</code> Dinner split three ways</div>
+  <div style="font-weight:var(--font-weight-bold)"><code>font-weight-bold</code> Dinner split three ways</div>
+  <div><code>font-family-base</code>, <code>line-height-base</code> (body text)</div>
+</div>
+
+<h2>Sizing and other tokens</h2>
+<div class="grid">
+  <table class="table"><thead><tr><th>Token</th><th>Used for</th></tr></thead><tbody>
+    <tr><td><code>control-height-sm</code> / <code>control-height</code> / <code>control-height-lg</code></td><td>Button and input heights</td></tr>
+    <tr><td><code>icon-size</code>, <code>avatar-size</code>, <code>spinner-size</code></td><td>Icon, avatar, spinner</td></tr>
+    <tr><td><code>border-width</code>, <code>focus-ring-width</code>, <code>focus-ring-offset</code></td><td>Borders and focus ring</td></tr>
+    <tr><td><code>switch-width</code>, <code>switch-height</code>, <code>switch-knob</code>, <code>check-size</code></td><td>Switch, checkbox, radio</td></tr>
+    <tr><td><code>drawer-width</code>, <code>modal-width</code>, <code>toast-width</code>, <code>menu-min-width</code>, <code>tooltip-max-width</code></td><td>Overlay and menu sizes</td></tr>
+    <tr><td><code>content-max-width</code>, <code>grid-min</code></td><td>Page column, grid columns</td></tr>
+    <tr><td><code>opacity-backdrop</code>, <code>opacity-disabled</code>, <code>z-overlay</code></td><td>Backdrop, disabled state, overlay stacking</td></tr>
+  </tbody></table>
+  <table class="table"><thead><tr><th>Component alias</th><th>Points at</th></tr></thead><tbody>
+    <tr><td><code>button-primary-background</code>, <code>button-primary-foreground</code></td><td>color-primary, color-on-primary</td></tr>
+    <tr><td><code>button-primary-hover-background</code></td><td>color-primary-hover</td></tr>
+    <tr><td><code>button-secondary-background</code>, <code>-foreground</code>, <code>-border</code></td><td>color-surface, color-fg, color-border</td></tr>
+    <tr><td><code>button-danger-background</code>, <code>button-danger-foreground</code></td><td>color-danger, color-on-primary</td></tr>
+    <tr><td><code>button-default-radius</code></td><td>radius-md</td></tr>
+    <tr><td><code>card-default-background</code>, <code>card-default-border</code></td><td>color-bg, color-border</td></tr>
+    <tr><td><code>card-default-radius</code>, <code>card-default-padding</code></td><td>radius-md, space-3</td></tr>
+  </tbody></table>
+</div>
+</section>
+
+<section class="stack" id="buttons">
+<h2>Buttons</h2>
+<div class="cluster">
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-secondary">Secondary</button>
+  <button class="btn btn-ghost">Ghost</button>
+  <button class="btn btn-danger">Danger</button>
+</div>
+<div class="cluster">
+  <button class="btn btn-primary btn-sm">Small</button>
+  <button class="btn btn-primary">Default</button>
+  <button class="btn btn-primary btn-lg">Large</button>
+  <button class="btn btn-secondary btn-icon" aria-label="Add">+</button>
+  <button class="btn btn-secondary btn-icon btn-sm" aria-label="Add">+</button>
+</div>
+<p class="muted text-sm">Disabled</p>
+<div class="cluster">
+  <button class="btn btn-primary" disabled>Primary</button>
+  <button class="btn btn-secondary" disabled>Secondary</button>
+  <button class="btn btn-ghost" disabled>Ghost</button>
+  <button class="btn btn-danger" disabled>Danger</button>
+</div>
+<p class="muted text-sm">Focus-visible: press Tab to reach any button.</p>
+</section>
+
+<section class="stack" id="forms">
+<h2>Form controls</h2>
+<div class="grid">
+  <div class="field"><label for="f1">Expense name</label><input id="f1" class="input" placeholder="Dinner"><span class="field-hint">What was it for?</span></div>
+  <div class="field"><label for="f2">Amount (invalid)</label><input id="f2" class="input is-invalid" value="abc" aria-invalid="true"><span class="field-error">Enter an amount like 1,200.</span></div>
+  <div class="field"><label for="f3">Disabled</label><input id="f3" class="input" value="Locked" disabled></div>
+  <div class="field"><label for="f4">Paid by</label><select id="f4" class="select"><option>Asha</option><option>Ravi</option><option>Meera</option></select></div>
+  <div class="field"><label for="f5">Select (invalid)</label><select id="f5" class="select is-invalid"><option>Choose…</option></select><span class="field-error">Pick who paid.</span></div>
+  <div class="field"><label for="f6">Select (disabled)</label><select id="f6" class="select" disabled><option>Asha</option></select></div>
+  <div class="field"><label for="f7">Note</label><textarea id="f7" class="textarea" placeholder="Optional"></textarea></div>
+  <div class="field"><label for="f8">Note (invalid)</label><textarea id="f8" class="textarea is-invalid"></textarea><span class="field-error">Too long.</span></div>
+  <div class="field"><label for="f9">Note (disabled)</label><textarea id="f9" class="textarea" disabled></textarea></div>
+</div>
+<div class="grid">
+  <div class="stack stack-sm">
+    <label class="check-row"><input type="checkbox" class="checkbox" checked> Asha</label>
+    <label class="check-row"><input type="checkbox" class="checkbox"> Ravi</label>
+    <label class="check-row"><input type="checkbox" class="checkbox is-invalid"> Invalid</label>
+    <label class="check-row"><input type="checkbox" class="checkbox" disabled> Disabled</label>
+  </div>
+  <div class="stack stack-sm">
+    <label class="check-row"><input type="radio" name="r" class="radio" checked> Split equally</label>
+    <label class="check-row"><input type="radio" name="r" class="radio"> Split by amount</label>
+    <label class="check-row"><input type="radio" name="r2" class="radio" disabled> Disabled</label>
+  </div>
+  <div class="stack stack-sm">
+    <label class="check-row"><input type="checkbox" class="switch" role="switch" checked> Remind everyone</label>
+    <label class="check-row"><input type="checkbox" class="switch" role="switch"> Off</label>
+    <label class="check-row"><input type="checkbox" class="switch" role="switch" disabled> Disabled</label>
+  </div>
+</div>
+</section>
+
+<section class="stack" id="menus">
+<h2>Dropdown and menu</h2>
+<div class="cluster" style="align-items:flex-start">
+  <div class="dropdown">
+    <button class="btn btn-secondary" data-menu="dd-closed" aria-haspopup="true" aria-expanded="false">Closed dropdown</button>
+    <div class="dropdown-menu" id="dd-closed" hidden></div>
+  </div>
+  <div class="dropdown is-open demo" style="min-height:calc(var(--control-height-lg) * 3)">
+    <button class="btn btn-secondary" data-menu="dd-open" aria-haspopup="true" aria-expanded="true">Open dropdown</button>
+    <div class="dropdown-menu is-open" id="dd-open" role="menu">
+      <button class="dropdown-item" role="menuitemradio" aria-checked="true">Everyone</button>
+      <button class="dropdown-item" role="menuitemradio" aria-checked="false">Asha</button>
+      <button class="dropdown-item" role="menuitemradio" aria-checked="false" disabled>Disabled</button>
+    </div>
+  </div>
+  <div class="menu" role="menu">
+    <a class="menu-item" href="#" role="menuitem">Edit group</a>
+    <a class="menu-item" href="#" role="menuitem">Share link</a>
+    <a class="menu-item text-danger" href="#" role="menuitem">Delete group</a>
+  </div>
+</div>
+</section>
+
+<section class="stack" id="navigation">
+<h2>Tabs, accordion, disclosure</h2>
+<div class="tabs" role="tablist">
+  <button class="tab" role="tab" aria-selected="true">Expenses</button>
+  <button class="tab" role="tab" aria-selected="false">Balances</button>
+  <button class="tab" role="tab" aria-selected="false" disabled>Disabled</button>
+</div>
+<div class="accordion">
+  <details class="disclosure" open><summary>Dinner · ₹1,200</summary><div class="disclosure-body">Asha paid, split among Asha, Ravi, Meera.</div></details>
+  <details class="disclosure"><summary>Cab · ₹300</summary><div class="disclosure-body">Ravi paid, split among Ravi and Meera.</div></details>
+</div>
+<details class="disclosure card"><summary>Standalone disclosure</summary><div class="disclosure-body">More detail appears here.</div></details>
+</section>
+
+<section class="stack" id="display">
+<h2>Card, badge, chip, avatar, divider, list, table</h2>
+<div class="grid">
+  <div class="card stack stack-sm"><h3>Goa trip</h3><p class="muted">3 people · 5 expenses</p><span class="text-danger fw-medium">You owe ₹400</span></div>
+  <div class="card stack stack-sm"><h3>Flat 4B</h3><p class="muted">4 people · 12 expenses</p><span class="text-success fw-medium">You get back ₹250</span></div>
+</div>
+<div class="cluster">
+  <span class="badge">Neutral</span>
+  <span class="badge badge-success">Settled</span>
+  <span class="badge badge-warning">Pending</span>
+  <span class="badge badge-danger">Overdue</span>
+</div>
+<div class="cluster">
+  <button class="chip" aria-pressed="false">Ravi</button>
+  <button class="chip" aria-pressed="true">Asha</button>
+  <span class="chip is-selected">Selected</span>
+</div>
+<div class="cluster">
+  <span class="avatar">A</span><span class="avatar avatar-sm">R</span>
+</div>
+<hr class="divider">
+<ul class="list card card-flush">
+  <li><span class="avatar avatar-sm">A</span><span>Dinner</span><span class="spacer"></span><span class="fw-medium">₹1,200</span></li>
+  <li><span class="avatar avatar-sm">R</span><span>Cab</span><span class="spacer"></span><span class="fw-medium">₹300</span></li>
+</ul>
+<div class="card card-flush"><table class="table"><thead><tr><th>From</th><th>To</th><th>Amount</th></tr></thead><tbody>
+  <tr><td>Ravi</td><td>Asha</td><td>₹400</td></tr>
+  <tr><td>Meera</td><td>Asha</td><td>₹400</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="stack" id="overlays">
+<h2>Overlays</h2>
+<p class="muted text-sm">Shown here with <code>.is-static</code> so they sit in the page. In a prototype they are <code>[hidden]</code> until <code>.is-open</code> is toggled.</p>
+<div class="grid">
+  <div class="stack stack-sm"><strong>Modal</strong>
+    <div class="modal is-open is-static stack"><h2>Remove Ravi?</h2><p class="muted">His expenses stay, but balances will change.</p><div class="cluster"><button class="btn btn-danger">Remove</button><button class="btn btn-ghost">Cancel</button></div></div></div>
+  <div class="stack stack-sm"><strong>Drawer (right side)</strong>
+    <div class="drawer is-open is-static stack"><h2>Add expense</h2><div class="field"><label for="d1">Name</label><input id="d1" class="input"></div><button class="btn btn-primary">Save</button></div></div>
+  <div class="stack stack-sm"><strong>Toast</strong>
+    <div class="toast is-open is-static" role="status">Expense added</div></div>
+  <div class="stack stack-sm"><strong>Tooltip</strong>
+    <div class="demo"><div class="tooltip is-open is-static" role="tooltip">Who paid first</div></div></div>
+  <div class="stack stack-sm"><strong>Backdrop (hidden here; covers the screen when open)</strong>
+    <div class="backdrop" hidden></div><span class="muted text-sm"><code>.backdrop.is-open</code> sits behind <code>.modal</code>.</span></div>
+  <div class="stack stack-sm"><strong>Hidden state</strong>
+    <div class="modal" hidden>Not visible</div><span class="muted text-sm">Overlays carry <code>hidden</code> when closed.</span></div>
+</div>
+</section>
+
+<section class="stack" id="feedback">
+<h2>Feedback</h2>
+<div class="alert alert-info">Info: balances update as you add expenses.</div>
+<div class="alert alert-success">Success: Ravi's payment is recorded.</div>
+<div class="alert alert-warning">Warning: this group has unsettled balances.</div>
+<div class="alert alert-danger">Error: we couldn't save that expense. Try again.</div>
+<div class="empty-state"><h3>No expenses yet</h3><p>Add the first one and we'll work out who owes what.</p><button class="btn btn-primary">Add expense</button></div>
+<div class="stack stack-sm"><span class="skeleton" style="width:60%"></span><span class="skeleton" style="width:90%"></span><span class="skeleton" style="width:40%"></span></div>
+<div class="cluster"><span class="spinner" role="status" aria-label="Loading"></span><span class="muted">Working out the fewest payments…</span></div>
+</section>
+
+<section class="stack" id="layout">
+<h2>Layout helpers</h2>
+<div class="stack stack-sm"><code>.stack / .stack-sm / .stack-lg</code>
+  <div class="stack stack-sm"><div class="card">One</div><div class="card">Two</div></div></div>
+<div class="stack stack-sm"><code>.cluster / .cluster-lg</code>
+  <div class="cluster"><span class="badge">One</span><span class="badge">Two</span><span class="badge">Three</span></div></div>
+<div class="stack stack-sm"><code>.grid</code>
+  <div class="grid"><div class="card">A</div><div class="card">B</div><div class="card">C</div></div></div>
+<p class="muted text-sm">Also: <code>.container</code>, <code>.muted</code>, <code>.text-sm</code>, <code>.text-success</code>, <code>.text-danger</code>, <code>.fw-bold</code>, <code>.fw-medium</code>, <code>.spacer</code>, <code>.list</code>, <code>.table</code>.</p>
+</section>
+
+<section class="stack guide" id="ui-guidelines">
+<h1>UI guidelines</h1>
+
+<h2>Navigation and information architecture</h2>
+<ul>
+  <li><strong>Top bar with four sections, in this order: Groups, Expenses, Balances, Settle up.</strong> The order follows the flow: set up people, log spend, see who owes, then pay.</li>
+  <li><strong>No sidebar, no account area.</strong> The app has no sign-in, and four destinations fit a top bar.</li>
+  <li><strong>Below the tablet breakpoint the links collapse behind a menu button.</strong> Phones are the main device when splitting a bill at the table.</li>
+  <li><strong>Group context is a heading on each screen, not a nav level.</strong> One group at a time keeps the nav flat.</li>
+</ul>
+
+<h2>Layout and density</h2>
+<ul>
+  <li><strong>Spacious consumer layout in a single centred column (<code>.container</code>), content width capped by <code>content-max-width</code>.</strong> Users are casual and mostly on phones.</li>
+  <li><strong>Design mobile-first (375px); the only layout change that matters is stacking to multi-column at tablet width.</strong> Use <code>.grid</code> (auto-fit) so no per-breakpoint CSS is needed.</li>
+  <li><strong>Space with <code>.stack</code> and <code>.cluster</code>, using <code>space-3</code> between items and <code>space-4</code> between sections.</strong> Consistent rhythm replaces ad-hoc margins.</li>
+  <li><strong>Primary action sits at the end of the content or form, full width on phones.</strong> It is the thumb's natural target.</li>
+</ul>
+
+<h2>Component usage</h2>
+<ul>
+  <li><strong>People, groups and expenses are <code>.card</code>s inside a <code>.grid</code>; a group's expenses are a <code>.list</code>.</strong> Each item is a small record, not a data row.</li>
+  <li><strong>Use <code>.table</code> only for the settle-up plan and the per-person balance summary.</strong> Those are the only places users compare columns of money.</li>
+  <li><strong>One <code>.btn-primary</code> per screen; secondary actions use <code>.btn-secondary</code> or <code>.btn-ghost</code>.</strong> A single clear next step.</li>
+  <li><strong><code>.btn-danger</code> only for removing a person, expense or group, always behind a <code>.modal</code> confirmation.</strong> Deletes change everyone's balances.</li>
+  <li><strong>Amounts: <code>text-success</code> for money owed to you, <code>text-danger</code> for money you owe, neutral for settled.</strong> Colour carries direction, but always pair it with words ("owes", "gets back").</li>
+  <li><strong>Use <code>.badge-success</code> for "Settled" and <code>.badge-warning</code> for "Pending".</strong> Status reads at a glance in lists.</li>
+  <li><strong>Choosing who shared an expense uses <code>.chip</code>s or <code>.checkbox</code>es in a <code>.field</code>; the payer uses <code>.select</code>.</strong> Many-of-many versus one-of-many.</li>
+  <li><strong>Use <code>.tabs</code> to switch views inside a group (e.g. Expenses / Balances); use <code>.drawer</code> for add-expense on larger screens and a full screen on phones.</strong> Keeps the user in context.</li>
+  <li><strong>Feedback: <code>.toast</code> for completed saves, <code>.alert-danger</code> for failures, <code>.empty-state</code> with a primary action for a group with no expenses.</strong> Each says what happened and what to do next.</li>
+  <li><strong>Field errors show in <code>.field-error</code> beneath the control with <code>.is-invalid</code>.</strong> The message sits next to the problem.</li>
+</ul>
+
+<h2>Theme</h2>
+<ul><li><strong>Light theme only.</strong> One theme halves the verification work, and bright surfaces suit use in daylight at restaurants.</li></ul>
+
+<h2>Voice and tone</h2>
+<ul>
+  <li><strong>Plain, friendly, second person: "You owe Asha ₹400", not "Debt: ₹400".</strong> Money talk is awkward; plain words defuse it.</li>
+  <li><strong>Always name the people and show the ₹ amount with Indian digit grouping (₹1,200).</strong> Specifics prevent disputes.</li>
+  <li><strong>Buttons are verbs: "Add expense", "Settle up", "Add person".</strong> Users know what will happen.</li>
+  <li><strong>Never blame or shame in empty and error states; say how to fix it.</strong> Friends share these screens.</li>
+</ul>
+</section>
+</div>
+</body>
+</html>
