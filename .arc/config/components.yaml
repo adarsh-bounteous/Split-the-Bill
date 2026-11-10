@@ -3,3 +3,13 @@ components:
   comp_web_app:
     name: Web App
     kind: web_ui
+    directory: apps/web
+    stack:
+      choices:
+        styling: plain CSS
+        language: typescript
+        package_manager: npm
+        testing_tool_e2e: playwright
+        testing_tool_unit: vitest
+      notes: Vite build, no UI framework; database not applicable (no backend, all
+        in browser); settlement logic is a pure TypeScript module
