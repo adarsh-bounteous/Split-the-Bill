@@ -1,0 +1,14 @@
+components:
+  comp_web_app:
+    mode: local
+    e2e_command: cd apps/web && npm run e2e
+    test_command: cd apps/web && npm test
+    build_command: cd apps/web && npm run build
+    devloop_command: cd apps/web && npm run devloop
+commands:
+  test: cd apps/web && npm test
+  build: cd apps/web && npm run build
+  devloop: cd apps/web && npm run devloop
+setup_command: cd apps/web && npm ci
+toolchain:
+  node: '22'
