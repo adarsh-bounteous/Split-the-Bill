@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Split-the-Bill — App shell</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="prototype-utils.css">
+<style>
+  .shell { display: flex; flex-direction: column; min-height: 100vh; }
+  .shell-header { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-3); background: var(--color-bg); border-bottom: var(--border-width) solid var(--color-border); }
+  /* Tap-target sizes carry a rem fallback so they hold even if tokens.css is not loaded. */
+  .shell-brand { display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--control-height-lg, 3rem); min-width: var(--control-height-lg, 3rem); margin-right: auto; font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary); text-decoration: none; }
+  .shell-nav { flex-basis: 100%; display: flex; flex-direction: column; gap: var(--space-1); }
+  .shell-nav[hidden] { display: none !important; }
+  .shell-menu-btn { display: inline-flex; align-items: center; justify-content: center; min-width: var(--control-height-lg, 3rem); min-height: var(--control-height-lg, 3rem); cursor: pointer; }
+  .shell-nav a { display: flex; align-items: center; min-height: var(--control-height-lg, 3rem); min-width: var(--control-height-lg, 3rem); padding: 0 var(--space-3, 1rem); color: var(--color-fg); text-decoration: none; border-radius: var(--radius-md); }
+  .shell-nav a:hover { background: var(--color-surface); }
+  .shell-nav a[aria-current="page"] { color: var(--color-primary); font-weight: var(--font-weight-bold); background: var(--color-surface); }
+  .shell-main { flex: 1; width: 100%; max-width: var(--content-max-width); margin-inline: auto; padding: var(--space-4) var(--space-3); }
+  .shell-footer { padding: var(--space-3); color: var(--color-fg-muted); font-size: var(--font-size-sm); background: var(--color-surface); border-top: var(--border-width) solid var(--color-border); }
+  /* Tablet breakpoint: nav moves inline in the top bar, menu button goes away. */
+  @media (min-width: 640px) {
+    .shell-menu-btn { display: none; }
+    .shell-nav, .shell-nav[hidden] { display: flex !important; flex-direction: row; flex-basis: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="shell" data-arc-shell>
+  <header class="shell-header" data-arc-shell-part="header">
+    <a class="shell-brand" href="#">Split-the-Bill</a>
+    <button class="btn btn-secondary btn-icon shell-menu-btn" type="button" data-toggle="main-nav" aria-controls="main-nav" aria-label="Menu">&#9776;</button>
+    <nav class="shell-nav" id="main-nav" aria-label="Main" data-arc-shell-part="nav" hidden>
+      <a href="#" data-nav-key="groups">Groups</a>
+      <a href="#" data-nav-key="expenses">Expenses</a>
+      <a href="#" data-nav-key="balances">Balances</a>
+      <a href="#" data-nav-key="settle">Settle up</a>
+    </nav>
+  </header>
+  <main class="shell-main"><div data-arc-content></div></main>
+  <footer class="shell-footer" data-arc-shell-part="footer">Split-the-Bill — fewer payments, fewer awkward chats.</footer>
+</div>
+</body>
+</html>
