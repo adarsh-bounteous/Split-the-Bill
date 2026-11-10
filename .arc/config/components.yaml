@@ -1,0 +1,5 @@
+version: 1
+components:
+  comp_web_app:
+    name: Web App
+    kind: web_ui
