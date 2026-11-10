@@ -5,6 +5,7 @@ components:
     test_command: cd apps/web && npm test
     build_command: cd apps/web && npm run build
     devloop_command: cd apps/web && npm run devloop
+    install_command: cd apps/web && npm install {name}@{version}
 commands:
   test: cd apps/web && npm test
   build: cd apps/web && npm run build
@@ -12,3 +13,5 @@ commands:
 setup_command: cd apps/web && npm ci
 toolchain:
   node: '22'
+package_install_commands:
+  npm: npm install {name}@{version}
